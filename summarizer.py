@@ -1,7 +1,9 @@
 from transformers import pipeline
 import os
+import streamlit as st
 
 
+@st.cache
 def summarize(text, model="plguillou/t5-base-fr-sum-cnndm", device=-1, min_length=75, max_length=300, truncation=True):
     '''
     This function takes a text and returns a summarized version of it.
