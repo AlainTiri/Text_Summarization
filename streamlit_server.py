@@ -36,9 +36,9 @@ with st.form("my_form"):
         elif model == 'EN':
             summarized = summarize(
                 text, model="sshleifer/distilbart-cnn-12-6", device=device)
-        if not len(question) != 0:
+        if (len(question) > 0):
             st.text('Answer:')
-            st.markdown(str(summarized[0]['summary_text']))
+            st.markdown('work in progress...')
         st.text('Summary Text:')
         st.markdown(str(summarized[0]['summary_text']))
 
